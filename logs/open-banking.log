@@ -1,0 +1,212 @@
+2026-11-13 10:16:37 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 36412 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:16:37 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:16:37 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:16:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:16:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:16:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:16:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:16:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 322 ms
+2026-11-13 10:16:38 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2026-11-13 10:16:38 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-11-13 10:16:38 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-11-13 10:16:38 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-11-13 10:18:34 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 1.8.0_512 on MacBook-Air-Uzmacboko.local with PID 36701 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:18:34 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:18:34 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:18:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:18:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:18:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:18:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:18:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 336 ms
+2026-11-13 10:18:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:18:35 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.87 seconds (JVM running for 5.981)
+2026-11-13 10:18:49 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:18:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:18:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-11-13 10:18:49 [http-nio-8080-exec-1] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 1
+2026-11-13 10:18:49 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 10:18:54 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 10:20:09 [http-nio-8080-exec-5] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 1
+2026-11-13 10:20:13 [http-nio-8080-exec-6] INFO  c.i.o.c.OpenBankingController - Balances start: requestId: 1
+2026-11-13 10:20:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 10:20:46 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 10:21:04 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 36750 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:21:04 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:21:04 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:21:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:21:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:21:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:21:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:21:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 254 ms
+2026-11-13 10:21:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:21:04 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.62 seconds (JVM running for 5.733)
+2026-11-13 10:21:08 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:21:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:21:08 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-11-13 10:21:08 [http-nio-8080-exec-1] INFO  c.i.o.c.OpenBankingController - Exists start: requestId: 3
+2026-11-13 10:21:08 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 10:21:08 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 10:21:13 [http-nio-8080-exec-3] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:22:03 [http-nio-8080-exec-4] INFO  c.i.o.c.OpenBankingController - ClientInfo start: requestId: 50
+2026-11-13 10:22:05 [http-nio-8080-exec-5] INFO  c.i.o.c.OpenBankingController - Exists start: requestId: 3
+2026-11-13 10:22:10 [http-nio-8080-exec-6] INFO  c.i.o.c.OpenBankingController - Exists start: requestId: 54
+2026-11-13 10:27:06 [http-nio-8080-exec-9] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 1
+2026-11-13 10:31:15 [http-nio-8080-exec-1] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 1
+2026-11-13 10:31:43 [http-nio-8080-exec-3] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 1
+2026-11-13 10:31:44 [http-nio-8080-exec-4] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 1
+2026-11-13 10:32:16 [http-nio-8080-exec-5] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 3
+2026-11-13 10:34:13 [http-nio-8080-exec-8] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 3
+2026-11-13 10:34:13 [http-nio-8080-exec-9] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 3
+2026-11-13 10:34:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 10:34:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 10:34:25 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 37107 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:34:25 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:34:25 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:34:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:34:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:34:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:34:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:34:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 256 ms
+2026-11-13 10:34:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:34:25 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.571 seconds (JVM running for 5.675)
+2026-11-13 10:35:10 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:35:10 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:35:10 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-11-13 10:35:10 [http-nio-8080-exec-2] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 3
+2026-11-13 10:35:10 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 10:35:15 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 10:35:25 [http-nio-8080-exec-3] INFO  c.i.o.c.OpenBankingController - Balances start: requestId: 1
+2026-11-13 10:35:31 [http-nio-8080-exec-4] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:36:50 [http-nio-8080-exec-7] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:37:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 10:37:00 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 10:37:05 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 37164 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:37:05 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:37:05 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:37:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:37:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:37:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:37:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:37:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 256 ms
+2026-11-13 10:37:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:37:06 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.541 seconds (JVM running for 5.638)
+2026-11-13 10:37:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:37:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:37:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-11-13 10:37:14 [http-nio-8080-exec-1] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:37:14 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 10:37:19 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 10:37:36 [http-nio-8080-exec-3] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 
+2026-11-13 10:37:47 [http-nio-8080-exec-5] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:39:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 10:39:40 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 10:39:46 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 37174 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:39:46 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:39:46 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:39:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:39:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:39:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:39:47 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:39:47 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 373 ms
+2026-11-13 10:39:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:39:47 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.817 seconds (JVM running for 6.077)
+2026-11-13 10:39:51 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:39:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:39:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-11-13 10:39:51 [http-nio-8080-exec-1] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:39:51 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 10:39:57 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 10:40:02 [http-nio-8080-exec-3] INFO  c.i.o.c.OpenBankingController - ClientInfo start: requestId: 50
+2026-11-13 10:40:05 [http-nio-8080-exec-4] INFO  c.i.o.c.OpenBankingController - Search start: requestId: 3
+2026-11-13 10:40:07 [http-nio-8080-exec-5] INFO  c.i.o.c.OpenBankingController - Balances start: requestId: 1
+2026-11-13 10:40:11 [http-nio-8080-exec-6] INFO  c.i.o.c.OpenBankingController - Exists start: requestId: 54
+2026-11-13 10:53:05 [http-nio-8080-exec-9] INFO  c.i.o.c.OpenBankingController - Exists start: requestId: 5
+2026-11-13 10:53:07 [http-nio-8080-exec-10] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:53:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 10:53:20 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 10:53:26 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 37331 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:53:26 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:53:26 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:53:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:53:27 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:53:27 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:53:27 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:53:27 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 305 ms
+2026-11-13 10:53:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:53:27 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.657 seconds (JVM running for 5.779)
+2026-11-13 10:54:41 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:54:41 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:54:41 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-11-13 10:54:42 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 101 ms
+2026-11-13 10:58:11 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 37370 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 10:58:11 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 10:58:11 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 10:58:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 10:58:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 10:58:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 10:58:12 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 10:58:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 316 ms
+2026-11-13 10:58:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 10:58:12 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.679 seconds (JVM running for 5.791)
+2026-11-13 10:58:13 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 10:58:13 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 10:58:13 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-11-13 10:58:13 [http-nio-8080-exec-2] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 10:58:13 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 10:58:13 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 11:18:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 11:18:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 11:18:40 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 37729 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 11:18:40 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 11:18:40 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 11:18:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 11:18:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 11:18:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 11:18:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 11:18:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 310 ms
+2026-11-13 11:18:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 11:18:41 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.686 seconds (JVM running for 5.833)
+2026-11-13 11:18:52 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-13 11:18:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-13 11:18:52 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-11-13 11:18:52 [http-nio-8080-exec-1] INFO  c.i.o.c.OpenBankingController - Details start: requestId: 1
+2026-11-13 11:18:52 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Starting...
+2026-11-13 11:18:57 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Start completed.
+2026-11-13 12:08:58 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=11m30s11ms).
+2026-11-13 12:25:27 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=15m29s234ms).
+2026-11-13 12:30:41 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=4m43s944ms).
+2026-11-13 12:35:25 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=4m44s197ms).
+2026-11-13 12:40:38 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=4m43s253ms).
+2026-11-13 12:50:25 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=5m16s980ms).
+2026-11-13 12:55:22 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=4m26s370ms).
+2026-11-13 13:11:57 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=16m5s201ms).
+2026-11-13 13:27:51 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=15m53s938ms).
+2026-11-13 14:10:17 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=14m25s753ms).
+2026-11-13 14:16:22 [OPEN-BANKING housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - OPEN-BANKING - Thread starvation or clock leap detected (housekeeper delta=6m4s815ms).
+2026-11-13 14:19:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown initiated...
+2026-11-13 14:19:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - OPEN-BANKING - Shutdown completed.
+2026-11-13 14:19:55 [main] INFO  c.i.o.OpenBankingClientApiApplication - Starting OpenBankingClientApiApplication using Java 17.0.20.1 on MacBook-Air-Uzmacboko.local with PID 38526 (/Users/uzmacboko/Desktop/OPEN BANKING CLIENT API/build/classes/java/main started by uzmacboko in /Users/uzmacboko/Desktop/OPEN BANKING CLIENT API)
+2026-11-13 14:19:55 [main] DEBUG c.i.o.OpenBankingClientApiApplication - Running with Spring Boot v2.7.9, Spring v5.3.25
+2026-11-13 14:19:55 [main] INFO  c.i.o.OpenBankingClientApiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-13 14:19:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2026-11-13 14:19:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-13 14:19:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+2026-11-13 14:19:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-11-13 14:19:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 319 ms
+2026-11-13 14:19:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2026-11-13 14:19:56 [main] INFO  c.i.o.OpenBankingClientApiApplication - Started OpenBankingClientApiApplication in 5.686 seconds (JVM running for 5.886)
