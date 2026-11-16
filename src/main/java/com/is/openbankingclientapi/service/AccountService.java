@@ -32,15 +32,14 @@ public class AccountService {
     private static final String ACCOUNT_SQL = "select a.id, \n" +
             "       a.branch, \n" +
             "       a.name, \n" +
-            "       decode(trim(a.sgn), 'A', 'ACTIVE', 'А', 'ACTIVE', 'P', 'PASSIVE', 'П', 'PASSIVE', 'OTHER') active_type, \n" +
-            "       decode(trim(a.state), '2', 'OPEN', '3', 'CLOSED', null, 'NOT_DETERMINED', 'OTHER') state, \n" +
-            "       decode(substr(trim(a.acc_bal), 1, 1), '1', 'ASSETS', '2', 'LIABILITIES', '3', 'EQUITY', \n" +
-            "                                             '4', 'INCOME', '5', 'EXPENSES', '9', 'CONTINGENT') account_class_type, \n" +
+            "       decode(a.sgn, 'A', 'ACTIVE', 'А', 'ACTIVE', 'P', 'PASSIVE', 'П', 'PASSIVE', 'OTHER') active_type, \n" +
+            "       decode(a.state, '2', 'OPEN', '3', 'CLOSED', null, 'NOT_DETERMINED', 'OTHER') state, \n" +
+            "       decode(substr(a.acc_bal, 1, 1), '1', 'ASSETS', '2', 'LIABILITIES', '3', 'EQUITY', \n" +
+            "                                '4', 'INCOME', '5', 'EXPENSES', '9', 'CONTINGENT') account_class_type, \n" +
             "       decode(a.currency, '000', '860', a.currency) currency, \n" +
             "       kernel.GetSOut(a.id, info.GetDay, null, a.branch) saldo \n" +
             "  from account a \n";
 
-    // 4.1 Bitta yoki bir nechta hisobning qoldig'ini olish
     public ApiResponse<List<AccountBaseInfo>> getBalances(ApiRequest<BalancesPayload> request) {
         try {
             checkRequest.checkHeader(request);
@@ -53,7 +52,6 @@ public class AccountService {
             List<AccountBaseInfo> balances = new ArrayList<>();
             for (int i = 0; i < bans.size(); i++) {
                 AccountDetailInfo account = getAccount(request.getRequestId(), bans.get(i), "payload.bans[" + i + "].");
-
                 balances.add(AccountBaseInfo.builder()
                         .requestId(account.getRequestId())
                         .ban(account.getBan())
@@ -72,20 +70,22 @@ public class AccountService {
         }
     }
 
-    // 4.2 Hisoblarni qidirish
     public ApiResponse<List<AccountDetailInfo>> searchAccounts(ApiRequest<SearchPayload> request) {
         try {
             checkRequest.checkHeader(request);
             SearchPayload payload = request.getPayload();
-            checkRequest.checkNotEmpty("payload.mfo", payload.getMfo(), "payload.bankClientNumber", payload.getBankClientNumber());
+            checkRequest.checkNotEmpty("payload.mfo", payload.getMfo(),
+                    "payload.bankClientNumber", payload.getBankClientNumber());
 
-            if (checkRequest.isEmpty(payload.getBalanceType()) && checkRequest.isEmpty(payload.getCcy()) && checkRequest.isEmpty(payload.getOrder())) {
+            if (checkRequest.isEmpty(payload.getBalanceType())
+                    && checkRequest.isEmpty(payload.getCcy())
+                    && checkRequest.isEmpty(payload.getOrder())) {
                 throw new ApiException(ErrorCode.EMPTY_PARAM, "payload.balanceType", "payload.ccy", "payload.order");
             }
 
             List<Object> args = new ArrayList<>();
-            args.add(payload.getMfo().trim());
-            args.add(payload.getBankClientNumber().trim());
+            args.add(payload.getMfo());
+            args.add(payload.getBankClientNumber());
 
             String sql = ACCOUNT_SQL +
                     " where a.branch = ? \n" +
@@ -109,11 +109,9 @@ public class AccountService {
         }
     }
 
-    // 4.3 Hisob haqida batafsil ma'lumot olish
     public ApiResponse<AccountDetailInfo> getDetails(ApiRequest<AccountPayload> request) {
         try {
             checkRequest.checkHeader(request);
-
             return ApiResponse.ok(getAccount(request.getRequestId(), request.getPayload(), "payload."));
         } catch (ApiException e) {
             throw e;
@@ -123,14 +121,14 @@ public class AccountService {
         }
     }
 
-    // 4.4 Hisob mavjudligini tekshirish
     public ApiResponse<Boolean> existsAccount(ApiRequest<AccountPayload> request) {
         try {
             checkRequest.checkHeader(request);
             AccountPayload payload = request.getPayload();
             checkRequest.checkNotEmpty("payload.ban", payload.getBan(), "payload.mfo", payload.getMfo());
 
-            Integer count = jdbcTemplate.queryForObject("select count(*) from account a where a.id = ? and a.branch = ?", Integer.class, payload.getBan().trim(), payload.getMfo().trim());
+            Integer count = jdbcTemplate.queryForObject("select count(*) from account a where a.id = ? and a.branch = ?",
+                    Integer.class, payload.getBan(), payload.getMfo());
 
             return ApiResponse.ok(count > 0);
         } catch (ApiException e) {
@@ -151,7 +149,7 @@ public class AccountService {
             if (accountInfo.get() == null) {
                 accountInfo.set(createAccount(requestId, rs));
             }
-        }, payload.getBan().trim(), payload.getMfo().trim());
+        }, payload.getBan(), payload.getMfo());
 
         if (accountInfo.get() == null) {
             log.info("Account not found: requestId: {}, ban: {}", requestId, payload.getBan());
@@ -166,7 +164,7 @@ public class AccountService {
                 .requestId(requestId)
                 .ban(rs.getString("id"))
                 .mfo(rs.getString("branch"))
-                .currentBalance(rs.getObject("saldo") == null ? null : rs.getLong("saldo"))
+                .currentBalance(rs.getObject("saldo", Long.class))
                 .accountName(rs.getString("name"))
                 .activeType(rs.getString("active_type"))
                 .state(rs.getString("state"))
@@ -180,7 +178,7 @@ public class AccountService {
         if (checkRequest.isEmpty(value)) {
             return "";
         }
-        args.add(value.trim());
+        args.add(value);
         return condition;
     }
 }

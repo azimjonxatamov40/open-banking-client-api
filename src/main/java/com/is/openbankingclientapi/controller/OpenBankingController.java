@@ -27,14 +27,14 @@ public class OpenBankingController {
     private final ClientService clientService;
     private final AccountService accountService;
 
-    // 3.1 Mijoz haqida ma'lumot olish
+    // 3.1 Mijoz haqida ma'lumot
     @PostMapping("/clients/info")
     public ResponseEntity<Object> clientInfo(@RequestBody ApiRequest<ClientPayload> request) {
         log.info("ClientInfo start: requestId: {}", request.getRequestId());
         return send(clientService.getClientInfo(request));
     }
 
-    // 4.1 Bitta yoki bir nechta hisobning qoldig'ini olish
+    // 4.1 Hisoblar qoldig'i
     @PostMapping("/accounts/balances")
     public ResponseEntity<Object> balances(@RequestBody ApiRequest<BalancesPayload> request) {
         log.info("Balances start: requestId: {}", request.getRequestId());
@@ -48,7 +48,7 @@ public class OpenBankingController {
         return send(accountService.searchAccounts(request));
     }
 
-    // 4.3 Hisob haqida batafsil ma'lumot olish
+    // 4.3 Hisob haqida batafsil ma'lumot
     @PostMapping("/accounts/details")
     public ResponseEntity<Object> details(@RequestBody ApiRequest<AccountPayload> request) {
         log.info("Details start: requestId: {}", request.getRequestId());

@@ -23,13 +23,12 @@ public class ClientService {
     private final JdbcTemplate jdbcTemplate;
     private final CheckRequest checkRequest;
 
-    // 3.1 Mijoz haqida ma'lumot olish
     public ApiResponse<ClientInfo> getClientInfo(ApiRequest<ClientPayload> request) {
         try {
             checkRequest.checkHeader(request);
-            checkRequest.checkNotEmpty("payload.pinfl", request.getPayload().getPinfl());
+            String pinfl = request.getPayload().getPinfl();
+            checkRequest.checkNotEmpty("payload.pinfl", pinfl);
 
-            String pinfl = request.getPayload().getPinfl().trim();
             if (!pinfl.matches("\\d{14}")) {
                 throw new ApiException(ErrorCode.INVALID_PARAM, "payload.pinfl");
             }
@@ -37,7 +36,7 @@ public class ClientService {
             AtomicReference<ClientInfo> clientInfo = new AtomicReference<>();
             jdbcTemplate.query("select c.branch, \n" +
                     "       c.pinfl, \n" +
-                    "       trim(c.passport_serial) || trim(c.passport_number) document_id, \n" +
+                    "       c.passport_serial || c.passport_number document_id, \n" +
                     "       c.phone_mobile, \n" +
                     "       c.id, \n" +
                     "       c.first_name, \n" +

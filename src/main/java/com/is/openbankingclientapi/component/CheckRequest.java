@@ -24,10 +24,9 @@ public class CheckRequest {
         List<String> emptyFields = new ArrayList<>();
 
         for (int i = 0; i < namesAndValues.length; i += 2) {
-            Object name = namesAndValues[i];
             Object value = namesAndValues[i + 1];
-            if (value == null || isEmpty(value.toString())) {
-                emptyFields.add(name.toString());
+            if (value == null || value.toString().isEmpty()) {
+                emptyFields.add(namesAndValues[i].toString());
             }
         }
 
@@ -37,19 +36,16 @@ public class CheckRequest {
     }
 
     public boolean isEmpty(String value) {
-        return value == null || value.trim().isEmpty();
+        return value == null || value.isEmpty();
     }
 
     public <T> ApiResponse<T> absError(Exception e) {
         if (e instanceof CannotGetJdbcConnectionException) {
             return ApiResponse.error(ErrorCode.ABS_BAD_GATEWAY, null);
         }
-
         if (e instanceof QueryTimeoutException) {
             return ApiResponse.error(ErrorCode.ABS_TIMEOUT, null);
         }
-
-        String errorText = ErrorCode.ABS_ERROR.getCause() + ": " + e.getMessage();
-        return ApiResponse.error(ErrorCode.ABS_ERROR, errorText, null);
+        return ApiResponse.error(ErrorCode.ABS_ERROR, ErrorCode.ABS_ERROR.getCause() + ": " + e.getMessage(), null);
     }
 }
