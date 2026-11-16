@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OpenBankingClientApiApplication {
+public class  OpenBankingClientApiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OpenBankingClientApiApplication.class, args);

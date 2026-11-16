@@ -3,21 +3,14 @@ server:
 
 spring:
   datasource:
-    driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@192.168.30.209:1521:agro
     username: bank394
     password: bank394
     hikari:
       maximum-pool-size: 10
       minimum-idle: 1
-      connection-init-sql: SELECT 1 FROM DUAL
       connection-timeout: 60000
       pool-name: OPEN-BANKING
-    type: com.zaxxer.hikari.HikariDataSource
-    name: OPEN-BANKING
-  sql:
-    init:
-      mode: never
 
 logging:
   level:
